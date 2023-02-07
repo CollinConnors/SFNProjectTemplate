@@ -50,5 +50,17 @@ class TestLogin:
         headers = {"Authorization": f"Bearer {jwt}"}
         res=requests.get(f'{backend_api}/hidden', headers = headers, verify=False)
         assert(res.status_code==200)
+
+    @pytest.mark.run(order=o+2)
+    def test_backend_api_post(self):
+        global jwt
+        headers = {"Authorization": f"Bearer {jwt}"}
+        payload = {'alive':True}
+        res=requests.post(f'{backend_api}/hidden',json=payload,headers = headers,verify=False)
+        assert(res.status_code==200)
+        j=json.loads(res.text)
+        assert(j=={'alive':True})
+
+
         
         

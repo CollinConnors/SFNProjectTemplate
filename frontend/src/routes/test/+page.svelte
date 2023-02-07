@@ -1,10 +1,10 @@
 
-
 <script>
   import axios from 'axios';
   import { onMount } from 'svelte';
+  import {backend_api} from "../../stores/servers"
   
-  let endpoint = 'http://localhost/api/v1/';
+  let endpoint = backend_api+'/';
   /**
 	 * @type {String}
 	 */
