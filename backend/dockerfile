@@ -8,6 +8,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /src
 
+ENV MYSQL_HOST mysql
+ENV MYSQL_USER root
+ENV MYSQL_PASSWORD admin
+
 ENV UVICORN_PORT 5000
 ENV UVICORN_HOST 0.0.0.0
 ENV UVICORN_LIFESPAN on

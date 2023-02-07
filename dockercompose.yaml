@@ -27,7 +27,7 @@ services:
     restart: always
     container_name: mysql
     ports:
-      - "3308:3306"
+      - "3306:3306"
     stop_signal: SIGINT
 
   phpmyadmin:

@@ -1,2 +1,5 @@
 falcon == 3.1.1
 uvicorn == 0.20.0
+mysql-connector-python == 8.0.32
+falcon_auth2[jwt, async] == 0.1.0
+Authlib == 1.2.0
