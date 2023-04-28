@@ -322,7 +322,7 @@ test_endpoint=TestEndpoint()
 login=Login()
 """{base_url}/login"""
 hidden=HiddenEndpoint()
-"""{base_url}/login"""
+"""{base_url}/hidden"""
 
 #--------------ASSIGN Routes--------------------
 app.add_route(f'{base_url}/', test_endpoint)
